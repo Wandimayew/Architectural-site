@@ -1,0 +1,23 @@
+.react-multiple-carousel__arrow {
+    background-color: white;
+    color: black;
+  }
+  
+  .react-multiple-carousel__arrow::before {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+  .carousel-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .custom-arrow-button {
+    background-color: white;
+    color: black;
+  }
+  
