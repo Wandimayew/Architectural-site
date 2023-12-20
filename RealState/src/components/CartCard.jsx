@@ -1,13 +1,11 @@
 import React from "react";
 
-const CartCard = ({item}) => {
-    const handleItemChange=()=>{
-        console.log("changed no of items in the one card");
-      }
+const CartCard = ({item, onRemove}) => {
+
       const handleExit=()=>{
         console.log("exitted");
+        onRemove(item);
       }
-      console.log("images", item.image);
   return (
     <div className="rounded-lg  lg:w-2/3">
       <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">

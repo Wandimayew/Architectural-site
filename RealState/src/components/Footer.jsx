@@ -9,8 +9,10 @@ import {
   ListItemPrefix,
 } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function Footer() {
+  const {role}=useAuth();
   const navigate=useNavigate();
   const handleAboutUs=()=>{
       console.log("about us handling");
@@ -21,7 +23,10 @@ export default function Footer() {
     navigate("/license")
   }
   return (
-    <footer className="flex flex-col bg-white w-full px-4 items-center justify-center gap-y-6 border-t border-blue-gray-50 py-6 text-center md:flex-row md:justify-between md:px-12">
+    <div>
+      {
+        !(role === "admin") &&(
+    <footer className="flex flex-col bg-blue-gray-400 w-full px-4 items-center justify-center gap-y-6 border-t border-blue-gray-400 py-6 text-center md:flex-row md:justify-between md:px-12">
       <Typography color="blue-gray" className="font-normal">
         &copy; 2023 Material Tailwind
       </Typography>
@@ -253,5 +258,8 @@ export default function Footer() {
         </li>
       </ul>
     </footer>
+    )
+  }
+  </div>
   );
 }

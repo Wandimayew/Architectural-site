@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
 import {FaCartPlus} from 'react-icons/fa'
 import photo1 from '../assets/images/photo1.avif'
